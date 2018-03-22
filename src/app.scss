@@ -81,7 +81,7 @@ svg, table {
 
 body {
   font: 400 1em/1 '-apple-system', BlinkMacSystemFont, sans-serif;
-  background: $background-light;
+  background: radial-gradient($dark-1, $dark-3);
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased; // 2
 }
@@ -111,6 +111,47 @@ button {
 //
 // # Styles
 // =============================================================================
+
+.app-button {
+  display: inline-block;
+  padding: 16px 48px;
+  border-radius: 4px;
+  color: $white;
+  font-size: 2rem;
+  font-weight: 300;
+  background: $blue;
+}
+
+.app-list {
+  padding: 24px 0;
+
+  div {
+    padding: 6px 0;
+  }
+}
+
+.app-box {
+  margin: auto;
+  padding: 48px 96px;
+  border-radius: 4px;
+  color: $dark-1;
+  text-align: center;
+  background: $white;
+  box-shadow: $shadow-top-1;
+
+  h1 {
+    margin: 0 0 16px;
+    font-size: 4em;
+    font-weight: 700;
+    letter-spacing: -0.015625em;
+  }
+
+  h2 {
+    color: $blue;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
 
 .app {
   display: flex;
