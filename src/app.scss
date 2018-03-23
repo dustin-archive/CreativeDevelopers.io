@@ -43,6 +43,7 @@ $red: rgb(223, 31, 47);
 $yellow: rgb(223, 159, 31);
 $green: rgb(127, 191, 63);
 $blue: rgb(31, 159, 223);
+$cyan: rgb(31, 223, 255);
 
 $dark-1: rgb(31, 33, 35);
 $dark-2: rgb(23, 25, 27);
@@ -50,8 +51,13 @@ $dark-3: rgb(15, 17, 19);
 
 $background-light: rgb(243, 245, 247);
 
-$shadow-top-1: 0 24px 48px -12px rgba($dark-3, 0.125);
-$shadow-top-2: 0 12px 24px -6px rgba($dark-3, 0.125);
+$shadow-top-1: 0 24px 48px -12px rgba($dark-3, 0.25);
+$shadow-top-2: 0 12px 24px -6px rgba($dark-3, 0.25);
+
+$text-shadow-1: 0 18px 36px rgba($dark-3, 0.25);
+
+$blue-dark: rgb(23, 27, 35);
+$blue-light: rgb(63, 95, 127);
 
 //
 // # Reset
@@ -81,7 +87,7 @@ svg, table {
 
 body {
   font: 400 1em/1 '-apple-system', BlinkMacSystemFont, sans-serif;
-  background: radial-gradient($dark-1, $dark-3);
+  background: radial-gradient(circle at 100% 0%, $blue-light, $blue-dark);
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased; // 2
 }
@@ -113,43 +119,52 @@ button {
 // =============================================================================
 
 .app-button {
-  display: inline-block;
-  padding: 16px 48px;
-  border-radius: 4px;
+  display: block;
+  margin: auto;
+  padding: 1em 3em;
+  border-radius: 2em;
   color: $white;
-  font-size: 2rem;
+  font-size: 1.25em;
   font-weight: 300;
-  background: $blue;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  background: radial-gradient(circle at 100% 0%, $cyan, $blue);
+  box-shadow: $shadow-top-1;
+  animation: slide 1.75s;
 }
 
 .app-list {
-  padding: 24px 0;
+  padding: 36px 1.5em;
+  animation: slide 1.5s;
 
-  div {
+  li {
     padding: 6px 0;
   }
 }
 
 .app-box {
+  display: flex;
+  flex-flow: column;
   margin: auto;
-  padding: 48px 96px;
   border-radius: 4px;
-  color: $dark-1;
-  text-align: center;
-  background: $white;
-  box-shadow: $shadow-top-1;
+  color: $white;
+  animation: slide 2s;
 
   h1 {
-    margin: 0 0 16px;
-    font-size: 4em;
+    margin: 0 0 24px;
+    font-size: 6em;
     font-weight: 700;
     letter-spacing: -0.015625em;
+    text-shadow: $text-shadow-1;
+    white-space: pre;
+    animation: slide 1s;
   }
 
   h2 {
     color: $blue;
     font-size: 2em;
     font-weight: 300;
+    animation: slide 1.25s;
   }
 }
 
@@ -160,4 +175,11 @@ button {
 
 img {
   margin: auto;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(128px);
+    opacity: 0;
+  }
 }
