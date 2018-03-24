@@ -16,7 +16,7 @@
   "dependencies": {
     "@whaaaley/query-string": "^0.2.0",
     "classcat": "^3.0.2",
-    "hyperapp": "^1.2.1"
+    "hyperapp": "^1.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
@@ -25,7 +25,7 @@
     "@jamen/dev-server": "^0.3.0",
     "autoprefixer": "^8.2.0",
     "clean-css-cli": "^4.1.11",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.3",
     "postcss-cli": "^5.0.0",
     "rollup": "^0.57.1",
     "rollup-plugin-node-resolve": "^3.3.0",
