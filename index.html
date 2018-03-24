@@ -10,9 +10,42 @@
     <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0'>
     <link rel='icon' type='image/png' href='favicon.png'>
     <link rel='stylesheet' href='app.css'>
+    <style>
+      .wrap {
+        display: flex;
+        height: 100vh;
+      }
+      .spinner {
+        width: 44px;
+        height: 44px;
+        margin: auto;
+        padding: 4px;
+        border-radius: 50%;
+        background: white;
+      }
+      .spinner::before {
+        display: block;
+        height: 18px;
+        transform-origin: 50% 100%;
+        border: 2px solid #1f9fdf;
+        border-radius: 18px 18px 0 0;
+        border-bottom-color: transparent;
+        content: '';
+        animation: 1s linear infinite spinner;
+      }
+      @keyframes spinner {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
     <script defer src='app.js'></script>
   </head>
   <body>
-    <div id='app'></div>
+    <div id='app'>
+      <div class='wrap'>
+        <div class='spinner'></div>
+      </div>
+    </div>
   </body>
 </html>
