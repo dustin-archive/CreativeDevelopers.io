@@ -6,16 +6,9 @@
 // =============================================================================
 
 @font-face {
-  font-family: 'Material Icons';
-  src:
-  local('MaterialIcons'),
-  local('MaterialIcons-Regular'),
-  url('fonts/MaterialIcons-Regular.woff2') format('woff2'),
-  url('fonts/MaterialIcons-Regular.woff') format('woff');
-}
-
-@font-face {
   font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
   src:
   local('Roboto'),
   local('Roboto-Regular'),
@@ -24,12 +17,14 @@
 }
 
 @font-face {
-  font-family: 'Roboto Mono';
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
   src:
-  local('Roboto Mono'),
-  local('Roboto-Mono-Regular'),
-  url('fonts/roboto-mono-v5-latin-regular.woff2') format('woff2'),
-  url('fonts/roboto-mono-v5-latin-regular.woff') format('woff');
+  local('Roboto Medium'),
+  local('Roboto-Medium'),
+  url('fonts/roboto-v18-latin-500.woff2') format('woff2'),
+  url('fonts/roboto-v18-latin-500.woff') format('woff');
 }
 
 //
@@ -39,22 +34,20 @@
 $white: #fff;
 $black: #000;
 
-$red: rgb(223, 31, 47);
-$yellow: rgb(223, 159, 31);
-$green: rgb(127, 191, 63);
+// $red: rgb(223, 31, 47);
+// $yellow: rgb(223, 159, 31);
+// $green: rgb(127, 191, 63);
 $blue: rgb(31, 159, 223);
 $cyan: rgb(31, 223, 255);
 
-$dark-1: rgb(31, 33, 35);
-$dark-2: rgb(23, 25, 27);
-$dark-3: rgb(15, 17, 19);
+// $dark-1: rgb(31, 33, 35);
+// $dark-2: rgb(23, 25, 27);
+// $dark-3: rgb(15, 17, 19);
 
-$background-light: rgb(243, 245, 247);
+// $background-light: rgb(243, 245, 247);
 
-$shadow-top-1: 0 24px 48px -12px rgba($dark-3, 0.25);
-$shadow-top-2: 0 12px 24px -6px rgba($dark-3, 0.25);
-
-$text-shadow-1: 0 18px 36px rgba($dark-3, 0.25);
+$shadow: 0 12px 24px -6px rgba($black, 0.25);
+$text-shadow: 0 12px 24px rgba($black, 0.25);
 
 $blue-dark: rgb(23, 27, 35);
 $blue-light: rgb(63, 95, 127);
@@ -86,8 +79,8 @@ svg, table {
 }
 
 body {
-  font: 400 1em/1 '-apple-system', BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at 100% 0%, $blue-light, $blue-dark);
+  font: 400 1em/1 'Roboto', '-apple-system', BlinkMacSystemFont, sans-serif;
+  background: $blue-dark;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased; // 2
 }
@@ -129,7 +122,7 @@ button {
   letter-spacing: 0.0625em;
   text-transform: uppercase;
   background: radial-gradient(circle at 100% 0%, $cyan, $blue);
-  box-shadow: $shadow-top-1;
+  box-shadow: $shadow;
   animation: slide 1.75s;
 }
 
@@ -148,14 +141,15 @@ button {
   margin: auto;
   border-radius: 4px;
   color: $white;
+  letter-spacing: 0.0625em;
   animation: slide 2s;
 
   h1 {
     margin: 0 0 24px;
+    font-family: 'Roboto';
     font-size: 6em;
-    font-weight: 700;
-    letter-spacing: -0.015625em;
-    text-shadow: $text-shadow-1;
+    font-weight: 900;
+    text-shadow: $text-shadow;
     white-space: pre;
     animation: slide 1s;
   }
