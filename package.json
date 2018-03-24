@@ -16,7 +16,7 @@
   "dependencies": {
     "@whaaaley/query-string": "^0.2.0",
     "classcat": "^3.0.2",
-    "hyperapp": "^1.2.2"
+    "hyperapp": "^1.2.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",

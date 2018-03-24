@@ -7,7 +7,7 @@ const state = {}
 
 const actions = {}
 
-const view = (...args) =>
+const view = s =>
   h('div', { class: 'app' }, [
     h('div', { class: 'app-box' }, [
       h('h1', null, 'Creative\nDevelopers.io'),
@@ -21,4 +21,4 @@ const view = (...args) =>
     ])
   ])
 
-app(state, actions, view, document.body)
+app(state, actions, view, document.getElementById('app'))

@@ -34,23 +34,13 @@
 $white: #fff;
 $black: #000;
 
-// $red: rgb(223, 31, 47);
-// $yellow: rgb(223, 159, 31);
-// $green: rgb(127, 191, 63);
 $blue: rgb(31, 159, 223);
 $cyan: rgb(31, 223, 255);
-
-// $dark-1: rgb(31, 33, 35);
-// $dark-2: rgb(23, 25, 27);
-// $dark-3: rgb(15, 17, 19);
-
-// $background-light: rgb(243, 245, 247);
 
 $shadow: 0 12px 24px -6px rgba($black, 0.25);
 $text-shadow: 0 12px 24px rgba($black, 0.25);
 
-$blue-dark: rgb(23, 27, 35);
-$blue-light: rgb(63, 95, 127);
+$dark: rgb(23, 27, 35);
 
 //
 // # Reset
@@ -80,7 +70,7 @@ svg, table {
 
 body {
   font: 400 1em/1 'Roboto', '-apple-system', BlinkMacSystemFont, sans-serif;
-  background: $blue-dark;
+  background: $dark;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased; // 2
 }
