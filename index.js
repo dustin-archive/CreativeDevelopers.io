@@ -1,34 +1,16 @@
 
 import fs from 'fs'
 
-import { h } from 'hyperapp'
 import { renderToString } from '@hyperapp/render/browser'
 
-import App from './src/views/App'
-
-const css = fs.readFileSync('./dist/app.css', 'utf-8')
+import Stub from './src/views/Stub'
 
 const state = {}
 
 const actions = {}
 
-const view = s =>
-  h('html', { lang: 'en-US' }, [
-    h('head', null, [
-      h('meta', { charset: 'utf-8' }),
-      h('title', null, 'Creative Developers'),
-      h('meta', { name: 'google-site-verification', content: 'z7NVwftYsHrQXIO0BJt2hCAK6jP16n-D7DQrmgxLI_I' }),
-      h('meta', { name: 'author', content: 'Dustin Dowell' }),
-      h('meta', { name: 'description', content: 'A Discord community for creative developers!' }),
-      h('meta', { name: 'keywords', content: 'backend, chat, community, creative, developers, discord, frontend, slack' }),
-      h('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=0' }),
-      h('link', { rel: 'icon', type: 'image/png', href: 'favicon.png' }),
-      h('style', { innerHTML: css }),
-      h('script', { defer: true, src: 'app.js' })
-    ]),
-    h('body', null, [
-      h('div', { id: 'app' }, App)
-    ])
-  ])
+const view = s => Stub({
+  css: fs.readFileSync('./dist/app.css', 'utf-8')
+})
 
 process.stdout.write('<!DOCTYPE html>' + renderToString(view, state, actions))
