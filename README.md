@@ -1,5 +1,5 @@
 
-# <img src=favicon.png height=24> CreativeDevelopers.io
+# <img src=favicon.png alt='favicon' height=24> CreativeDevelopers.io
 
 > A Discord community for creative developers!
 
