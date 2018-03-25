@@ -22,6 +22,7 @@
     "@babel/cli": "^7.0.0-beta.42",
     "@babel/core": "^7.0.0-beta.42",
     "@babel/preset-es2015": "^7.0.0-beta.42",
+    "@hyperapp/render": "^2.0.0",
     "@jamen/dev-server": "^0.3.0",
     "autoprefixer": "^8.2.0",
     "clean-css-cli": "^4.1.11",

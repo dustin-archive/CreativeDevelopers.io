@@ -10,6 +10,7 @@ all: build
 	babel dist/app.js --presets=@babel/preset-es2015 | uglifyjs -o dist/app.js -c pure_funcs=['Object.defineProperty'] -m --source-map "url='app.js.map',content='dist/app.js.map'" &
 	postcss dist/app.css -o dist/app.css -u autoprefixer -m
 	cleancss dist/app.css -o dist/app.css --source-map --source-map-inline-sources
+	env $$(cat .env) rollup index.js -f cjs -c -e 'fs,@hyperapp/render' | node > dist/index.html
 
 demo: build all
 	dev-server dist --watch 'src/**/*' 'make'
@@ -22,7 +23,7 @@ build: prep js css
 prep:
 	rm -rf dist
 	mkdir dist
-	cp -r fonts images favicon.png index.html sitemap.xml dist &
+	cp -r fonts images favicon.png sitemap.xml dist &
 
 js:
 	env $$(cat .env) rollup src/app.js -o dist/app.js -f iife -m -c
@@ -40,6 +41,7 @@ setup:
 		@babel/cli \
 		@babel/core \
 		@babel/preset-es2015 \
+		@hyperapp/render \
 		@jamen/dev-server \
 		autoprefixer \
 		clean-css-cli \
