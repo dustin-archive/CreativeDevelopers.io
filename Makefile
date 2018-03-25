@@ -10,7 +10,7 @@ all: build
 	babel dist/app.js --presets=@babel/preset-es2015 | uglifyjs -o dist/app.js -c pure_funcs=['Object.defineProperty'] -m --source-map "url='app.js.map',content='dist/app.js.map'" &
 	postcss dist/app.css -o dist/app.css -u autoprefixer -m
 	cleancss dist/app.css -o dist/app.css --source-map --source-map-inline-sources
-	env $$(cat .env) rollup index.js -f cjs -c -e 'fs,@hyperapp/render' | node > dist/index.html
+	env $$(cat .env) rollup index.js -f cjs -c -e 'fs' | node > dist/index.html
 
 demo: build all
 	dev-server dist --watch 'src/**/*' 'make'

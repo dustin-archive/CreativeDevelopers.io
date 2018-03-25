@@ -2,7 +2,7 @@
 import fs from 'fs'
 
 import { h } from 'hyperapp'
-import { renderToString } from '@hyperapp/render'
+import { renderToString } from '@hyperapp/render/browser'
 
 import App from './src/views/App'
 
