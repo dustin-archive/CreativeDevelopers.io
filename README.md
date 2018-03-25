@@ -3,9 +3,9 @@
 
 > A Discord community for creative developers!
 
-[**View Demo**](https://creativedevelopers.netlify.com/)
+[**View Site**](https://creativedevelopers.netlify.com/)
 
-![screenshot](screenshot.png)
+[![screenshot](screenshot.png)](https://creativedevelopers.netlify.com/)
 
 ## Install and Setup
 
