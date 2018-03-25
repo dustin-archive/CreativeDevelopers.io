@@ -118,11 +118,12 @@ button {
 
 .app-list {
   padding: 36px 1.5rem;
-  line-height: 1.5em;
+  font-size: 14px;
+  line-height: 1.5rem;
   animation: slide 1.5s;
 
   li {
-    padding: 6px 0;
+    padding: 3px 0;
   }
 }
 
@@ -138,7 +139,7 @@ button {
   h1 {
     margin: 0 0 12px;
     font-family: 'Roboto';
-    font-size: 3em;
+    font-size: 48px;
     font-weight: 900;
     text-shadow: $text-shadow;
     white-space: pre;
@@ -147,6 +148,7 @@ button {
 
   h2 {
     color: $blue;
+    font-size: 20px;
     font-weight: 300;
     line-height: 1.5em;
     animation: slide 1.25s;
@@ -166,13 +168,21 @@ button {
 }
 
 @media (min-width: 800px) {
+  .app-list {
+    font-size: 16px;
+
+    li {
+      padding: 6px 0;
+    }
+  }
+
   .app-box {
     h1 {
-      font-size: 6em;
+      font-size: 6rem;
     }
 
     h2 {
-      font-size: 2em;
+      font-size: 2rem;
     }
   }
 }
