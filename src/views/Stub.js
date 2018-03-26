@@ -14,13 +14,11 @@ const Stub = data =>
       h('meta', { name: 'keywords', content: 'backend, chat, community, creative, developers, discord, frontend, slack' }),
       h('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=0' }),
       h('link', { rel: 'icon', type: 'image/png', href: 'favicon.png' }),
-      h('style', { innerHTML: data.css }),
-      h('script', { innerHTML: 'window.START = new Date().getTime()' }),
-      h('script', { src: 'app.js', defer: true })
+      h('style', { innerHTML: data.css })
     ]),
     h('body', null, [
       h('div', { id: 'app' }, App),
-      // h('script', { innerHTML: data.js })
+      h('script', { innerHTML: data.js })
     ])
   ])
 
