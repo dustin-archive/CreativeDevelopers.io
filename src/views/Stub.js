@@ -16,11 +16,11 @@ const Stub = data =>
       h('link', { rel: 'icon', type: 'image/png', href: 'favicon.png' }),
       h('style', { innerHTML: data.css }),
       h('script', { innerHTML: 'window.START = new Date().getTime()' }),
-      // h('script', { src: 'app.js', defer: true })
+      h('script', { src: 'app.js', defer: true })
     ]),
     h('body', null, [
       h('div', { id: 'app' }, App),
-      h('script', { innerHTML: data.js })
+      // h('script', { innerHTML: data.js })
     ])
   ])
 
