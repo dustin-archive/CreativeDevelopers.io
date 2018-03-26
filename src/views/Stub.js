@@ -15,10 +15,12 @@ const Stub = data =>
       h('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=0' }),
       h('link', { rel: 'icon', type: 'image/png', href: 'favicon.png' }),
       h('style', { innerHTML: data.css }),
-      h('script', { defer: true, src: 'app.js' })
+      h('script', { innerHTML: 'window.START = new Date().getTime()' }),
+      // h('script', { src: 'app.js', defer: true })
     ]),
     h('body', null, [
-      h('div', { id: 'app' }, App)
+      h('div', { id: 'app' }, App),
+      h('script', { innerHTML: data.js })
     ])
   ])
 
