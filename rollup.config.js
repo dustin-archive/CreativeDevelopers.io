@@ -7,6 +7,6 @@ const { NODE_ENV } = process.env
 export default {
   plugins: [
     replace({ NODE_ENV }),
-    resolve()
+    resolve({ browser: true })
   ]
 }
