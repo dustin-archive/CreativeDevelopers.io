@@ -15,7 +15,7 @@ start: prep js css html
 	dev-server dist --watch 'src/**/*.js' 'make js' --watch 'src/**/*.scss' 'make css html'
 
 minify:
-	babel dist/app.js --presets=@babel/preset-es2015 | uglifyjs -o dist/app.js -c pure_funcs=['Object.defineProperty'] -m --source-map content='dist/app.js.map',url='app.js.map' &
+	babel dist/app.js --presets=@babel/preset-es2015 | uglifyjs -o dist/app.js -c pure_funcs=['Object.defineProperty'] -m --source-map includeSources,content='dist/app.js.map',url='app.js.map' &
 	postcss dist/app.css -o dist/app.css -u autoprefixer -m
 	cleancss dist/app.css -o dist/app.css --source-map --source-map-inline-sources
 
