@@ -1,4 +1,3 @@
-# GNU Make 3.8.2 or above
 
 PATH := node_modules/.bin:$(PATH)
 SHELL := /bin/bash
