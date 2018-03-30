@@ -18,5 +18,5 @@ const result = babel.transformFileSync('dist/app.js', {
   ]
 })
 
-fs.writeFileSync('dist/app.js', result.code, 'utf8')
-fs.writeFileSync('dist/app.js.map', JSON.stringify(result.map), 'utf8')
+fs.writeFileSync('dist/app.js', result.code)
+fs.writeFileSync('dist/app.js.map', JSON.stringify(result.map))
