@@ -1,6 +1,6 @@
 # GNU Make 3.8.2 or above
 
-PATH := $(PATH):node_modules/.bin
+PATH := node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
 .SILENT:
