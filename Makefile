@@ -3,7 +3,6 @@
 PATH := $(PATH):node_modules/.bin
 SHELL := /bin/bash
 
-.ONESHELL:
 .SILENT:
 
 all: prep js css minify html
@@ -16,14 +15,14 @@ start: prep js css html
 
 minify:
 	node scripts/babel
-	uglifyjs dist/app.js -o dist/app.js -c pure_funcs=['Object.defineProperty'] -m --source-map content='dist/app.js.map',url='app.js.map' &
+	uglifyjs dist/app.js -o dist/app.js -c pure_funcs=['Object.defineProperty'] -m --source-map content='dist/app.js.map',url='app.js.map'
 	postcss dist/app.css -o dist/app.css -u autoprefixer -m
 	cleancss dist/app.css -o dist/app.css --source-map --source-map-inline-sources
 
 prep:
 	rm -rf dist
 	mkdir dist
-	cp -r fonts images favicon.png sitemap.xml dist &
+	cp -r fonts images favicon.png sitemap.xml dist
 
 html:
 	rollup index.js -f cjs -e 'fs' -c | node > dist/index.html
