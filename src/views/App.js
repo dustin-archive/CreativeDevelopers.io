@@ -8,8 +8,7 @@ const App = d =>
       h('h2', null, 'A Discord community for creative developers!'),
       h('ul', { class: 'app-list' }, [
         h('li', null, 'Chat with other developers.'),
-        h('li', null, 'Ask questions and share knowledge.'),
-        h('li', null, 'Find jobs and get feedback.')
+        h('li', null, 'Ask questions and share knowledge.')
       ]),
       h('a', { class: 'app-button', href: 'https://discord.gg/rkrFHDb' }, 'Join Now')
     ])
